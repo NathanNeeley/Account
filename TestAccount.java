@@ -2,11 +2,11 @@
 // Term:       Fall 2019
 // Name:       Nathan Neeley
 // Instructor: Dr. Haddad
-// Assignment: 8
+// Assignment: 11
 // IDE Name:   Jgrasp
-// program that creates three objects and prints out meaningful information from them
+// program that creates three objects and prints out meaningful information from them with exception handling
 
-import java.util.Scanner; //import scanner class
+import java.util.*; //import scanner class
 import java.text.NumberFormat; //import Number Format class
 import java.text.DecimalFormat; //import Decimal Format class
 
@@ -63,6 +63,11 @@ public class TestAccount
                System.out.println(ex.getMessage());
                input.nextLine();
             }
+            
+            catch (InputMismatchException ex) {
+               System.out.println("Invalid input. Please re-enter myAccount information.");
+               input.nextLine();
+            }
          } while (replay == true);
          replay = true;
          
@@ -92,6 +97,11 @@ public class TestAccount
             
             catch (IllegalArgumentException ex2) {
                System.out.println(ex2.getMessage());
+               input.nextLine();
+            }
+            
+            catch (InputMismatchException ex) {
+               System.out.println("Invalid input. Please re-enter yourAccount information.");
                input.nextLine();
             }
          } while (replay == true);
