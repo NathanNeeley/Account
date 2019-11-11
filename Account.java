@@ -1,9 +1,3 @@
-// Class:      CS 5000
-// Term:       Fall 2019
-// Name:       Nathan Neeley
-// Instructor: Dr. Haddad
-// Assignment: 8
-// IDE Name:   Jgrasp
 // program that creates constructors and getter and setter methods to use in TestAccount
 
 import java.util.Scanner; //import scanner class
