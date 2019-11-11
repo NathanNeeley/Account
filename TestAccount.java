@@ -1,9 +1,3 @@
-// Class:      CS 5000
-// Term:       Fall 2019
-// Name:       Nathan Neeley
-// Instructor: Dr. Haddad
-// Assignment: 11
-// IDE Name:   Jgrasp
 // program that creates three objects and prints out meaningful information from them with exception handling
 
 import java.util.*; //import scanner class
