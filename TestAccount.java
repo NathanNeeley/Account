@@ -1,3 +1,9 @@
+// Class:      CS 5000
+// Term:       Fall 2019
+// Name:       Nathan Neeley
+// Instructor: Dr. Haddad
+// Assignment: 11
+// IDE Name:   Jgrasp
 // program that creates three objects and prints out meaningful information from them with exception handling
 
 import java.util.*; //import scanner class
@@ -33,7 +39,6 @@ public class TestAccount
             //myAccount Object
                System.out.print("\nPlease enter myAccount ID: "); //prompt user to enter myAccount ID
                int myAccountID = input.nextInt(); //read myAccountID from user
-               assert myAccountID > 0 : "Invalid ID. Program is terminated.";
                System.out.print("Please enter myAccount balance: "); //prompt user to enter myAccount balance
                double myAccountBalance = input.nextDouble(); //read myAccountBalance from user
                System.out.print("Please enter myAccount annual interest rate: "); //prompt user to enter annual interest rate

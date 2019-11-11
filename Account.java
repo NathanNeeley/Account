@@ -1,3 +1,9 @@
+// Class:      CS 5000
+// Term:       Fall 2019
+// Name:       Nathan Neeley
+// Instructor: Dr. Haddad
+// Assignment: 8
+// IDE Name:   Jgrasp
 // program that creates constructors and getter and setter methods to use in TestAccount
 
 import java.util.Scanner; //import scanner class
@@ -20,7 +26,10 @@ public class Account {
    }
    
    Account(int newID, double newBalance) throws IllegalArgumentException {
-      id = newID; //update id with input value in constructor
+      if (newID <= 0)
+         throw new IllegalArgumentException("ID has to be a positive number");
+      else
+         id = newID; //update id with input value in constructor
       if (newBalance <= 0)
          throw new IllegalArgumentException("balance can not be 0 or less");
       else
