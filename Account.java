@@ -1,8 +1,15 @@
+// Class:      CS 5000
+// Term:       Fall 2019
+// Name:       Nathan Neeley
+// Instructor: Dr. Haddad
+// Assignment: 11
+// IDE Name:   Jgrasp
 // program that creates constructors and getter and setter methods to use in TestAccount
 
 import java.util.Scanner; //import scanner class
-import java.text.NumberFormat;
-import java.text.DecimalFormat;
+import java.util.InputMismatchException; //import InputMismatchException
+import java.text.NumberFormat; //import NumberFormat class
+import java.text.DecimalFormat; //import DecimalFormat class
 import java.util.Date; //import Date class
 
 public class Account {
@@ -20,12 +27,9 @@ public class Account {
    }
    
    Account(int newID, double newBalance) throws IllegalArgumentException {
-      if (newID <= 0)
-         throw new IllegalArgumentException("ID has to be a positive number");
-      else
-         id = newID; //update id with input value in constructor
+      id = newID; //update id with input value in constructor
       if (newBalance <= 0)
-         throw new IllegalArgumentException("balance can not be 0 or less");
+         throw new IllegalArgumentException("balance can not be 0 or less"); //throw exception if balance is less than or equal to 0
       else
          balance = newBalance; //update balance with input value in constructor
    }
@@ -44,7 +48,7 @@ public class Account {
    
    public void setBalance(double newBalance) throws IllegalArgumentException {
       if (newBalance <= 0)
-         throw new IllegalArgumentException("balance can not be 0 or less");
+         throw new IllegalArgumentException("balance can not be 0 or less"); //throw exception if balance is less than or equal to 0
       else
          balance = newBalance; //update balance with parameter value
    }
@@ -55,7 +59,7 @@ public class Account {
    
    public void setAnnualInterestRate(double newAnnualInterestRate) throws IllegalArgumentException {
       if (newAnnualInterestRate <= 0)
-         throw new IllegalArgumentException("annual interest rate can not be 0 or less");
+         throw new IllegalArgumentException("annual interest rate can not be 0 or less"); //throw exception if annual interest rate is less than or equal to 0
       else 
          annualInterestRate = newAnnualInterestRate; //update annualInterestRate with parameter value
    }
@@ -74,16 +78,16 @@ public class Account {
    
    public void withdraw(double withdrawal) throws IllegalArgumentException {
       if (withdrawal <= 0)
-         throw new IllegalArgumentException("withdrawal can not be 0 or less");
+         throw new IllegalArgumentException("withdrawal can not be 0 or less"); //throw exception if withdrawal is less than or equal to 0
       else if (withdrawal > balance)
-         throw new IllegalArgumentException("withdrawal can not be larger than balance");
+         throw new IllegalArgumentException("withdrawal can not be larger than balance"); //throw exception if withdrawal is larger than balance
       else
          balance = balance - withdrawal; //update balance after a withdrawal
    }
    
    public void deposit(double deposited) throws IllegalArgumentException {
       if (deposited <= 0)
-         throw new IllegalArgumentException("deposit can not be 0 or less");
+         throw new IllegalArgumentException("deposit can not be 0 or less"); //throw exception if deposit is less than or equal to 0
       else
          balance = balance + deposited; //update balance after a deposit
    }
