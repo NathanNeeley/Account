@@ -1,3 +1,9 @@
+// Class:      CS 5000
+// Term:       Fall 2019
+// Name:       Nathan Neeley
+// Instructor: Dr. Haddad
+// Assignment: 11
+// IDE Name:   Jgrasp
 // program that creates constructors and getter and setter methods to use in TestAccount
 
 import java.util.Scanner; //import scanner class
@@ -86,6 +92,7 @@ public class Account {
          balance = balance + deposited; //update balance after a deposit
    }
    
+   @Override
    public String toString() {
       return ("\nAccount ID: \t\t" + id + "\nAccount Balance: \t" + MoneyFormat.format(balance) + "\nInterest Rate: \t" + PercentageFormat.format(annualInterestRate/100) + "\nDate Opened: \t\t" + dateCreated); //return meaningful description of instance variables
    }

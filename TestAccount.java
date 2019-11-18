@@ -1,3 +1,9 @@
+// Class:      CS 5000
+// Term:       Fall 2019
+// Name:       Nathan Neeley
+// Instructor: Dr. Haddad
+// Assignment: 11
+// IDE Name:   Jgrasp
 // program that creates three objects and prints out meaningful information from them with exception handling
 
 import java.util.Scanner; //import scanner class
@@ -94,8 +100,16 @@ public class TestAccount
             }
          } while (replay == true); //continue loop until exception is not caught
          
-         System.out.print("Re-run program (y/n)? "); //prompts user to rerun program with different inputs
-         another = input.next().charAt(0); //read char from user to rerun program or not
-      }
+         try {
+            System.out.print("Re-run program with different inputs (y/n)? "); //prompts user to rerun program with different password
+            another = input.next().charAt(0); //read char from user to rerun program or not
+            if (Character.toLowerCase(another) != 'y' && Character.toLowerCase(another) != 'n')
+               throw new InputMismatchException("Invalid input to rerun program. Program is automatically terminated."); //throw exception if user input is invalid
+         }
+         
+         catch (InputMismatchException ex) {
+            System.out.print(ex.getMessage()); //print out exception message
+            input.nextLine(); //discard input
+         }
    }
 }
